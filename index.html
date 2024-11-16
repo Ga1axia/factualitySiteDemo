@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Factuality</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+    body {
+      background: url('../images/cybertechVideoBG.mp4') no-repeat center center fixed;
+      background-size: cover;
+      color: #EAEAEA; /* Light text color for contrast */
+    }
+    .header_section {
+      background-color: rgba(50, 0, 100, 0.8); /* Dark purple background */
+    }
+    .comments_section {
+      margin: 50px 0;
+    }
+    .comments_container {
+      max-height: 300px;
+      overflow-y: auto;
+      margin-bottom: 20px;
+      transition: max-height 0.3s ease;
+    }
+    .comment {
+      margin-bottom: px;
+    }
+    .user_comment {
+      text-align: right;
+      font-weight: bold;
+    }
+    .btn_on-hover {
+      background-color: #6A0DAD; /* Dark purple button */
+      color: white;
+    }
+    .btn_on-hover:hover {
+      background-color: #4B0082; /* Darker purple on hover */
+    }
+    /* Popup styles */
+    .popup {
+      display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: purple; /* Changed to purple */
+      color: white; /* Text color for contrast */
+      border: 1px solid #ccc;
+      padding: 40px; /* Increased padding for a bigger popup */
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 600px; /* Increased width for the popup */
+      height: auto; /* Allow height to adjust based on content */
+    }
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Factuality
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="portfolio.html"> Portfolio </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact us</a>
+                </li>
+              </ul>
+              <div class="user_option">
+                <a href="">
+                  <img src="images/user.png" alt="">
+                </a>
+                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section position-relative">
+    
+      <div class="container">
+        <div class="detail-box" style="margin-top: 80px;"> <!-- Decreased margin-top to move title up slightly -->
+          <h2 style="font-size: 2.5rem; color: rgb(250, 240, 255);"> <!-- Made the heading bigger -->
+            welcome to
+          </h2>
+          <h1 style="font-size: 3.5rem; color: #b408db;"> <!-- Made the heading bigger and changed color to bright purple -->
+            Factuality
+          </h1>
+          <p>
+            A sleek, modernized fact-checker for everyday users
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- Comments Section -->
+   
+  <section class="comments_section layout_padding" style="background-color: #4B0082;"> <!-- Deep dark purple background -->
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Comments
+        </h2>
+      </div>
+      <div class="comments_container" id="commentsContainer">
+        <div class="comment">
+          <h5>Jack Ma</h5>
+          <p>This is a great website! I love the design.</p>
+        </div>
+        <div class="comment">
+          <h5>Robert Sevcik</h5>
+          <p>Very informative content. Keep it up!</p>
+        </div>
+        <div class="comment">
+          <h5>Xavier Nishikawa</h5>
+          <p>Awesome services offered here!</p>
+        </div>
+      </div>
+      <div class="comment_form">
+        <h5>Leave a Comment</h5>
+        <form id="commentForm">
+          <div>
+            <textarea placeholder="Your Comment" required style="width: 100%; height: 150px;"></textarea> <!-- Increased height for a bigger comment box -->
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn" style="background-color: #f8f9fa; color: #343a40;"> <!-- Light gray button styled similarly to other buttons -->
+              Post Comment
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- end Comments Section -->
+
+  <!-- Confirmation Popup for Comment Submission -->
+  <div class="popup-overlay" id="confirmationPopupOverlay"></div>
+  <div class="popup" id="confirmationPopup">
+    <h5>Confirm Submission</h5>
+    <p>Are you sure you want to post this comment?</p>
+    <p id="factCheckResult"></p> <!-- Placeholder for fact-check result -->
+    <div id="citationLinks"></div> <!-- Placeholder for citation links -->
+    <div class="d-flex justify-content-between">
+      <button id="confirmComment" class="btn_on-hover" style="background-color: white; color: purple;" disabled>Yes</button> <!-- White button -->
+      <button id="cancelConfirmation" class="btn_on-hover" style="background-color: white; color: purple;" disabled>No</button> <!-- White button -->
+    </div>
+  </div>
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2020 All Rights Reserved By
+      <a href="https://html.design/">Free Html Templates</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- owl carousel script 
+    -->
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 0,
+      navText: [],
+      center: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+
+    // Comment submission handling
+    document.getElementById('commentForm').addEventListener('submit', async function(event) {
+      event.preventDefault();
+      const commentText = this.querySelector('textarea').value;
+      const commentsContainer = document.getElementById('commentsContainer');
+
+      // Disable the submit button until the API call is complete
+      const submitButton = this.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+
+      // Show confirmation popup
+      const confirmationPopup = document.getElementById('confirmationPopup');
+      const confirmationPopupOverlay = document.getElementById('confirmationPopupOverlay');
+      confirmationPopup.style.display = 'block';
+      confirmationPopupOverlay.style.display = 'block';
+
+      // Fact-checking API call
+      const apiKey = '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'; // Replace with your actual API key
+      const handleSearch = async (text) => {
+        const Prompt = 'Please fact check this. Keep it a concise response and look for the newest and most reputable sources online. Make sure to keep it within the scope of the question. If the question is opinionated, do not put your opinion and state that the prompt is an opinion and you cannot fact check it. Please type "True", "Probably True", "Unknown" , "Probably False", "Untrue", or "Opinion" in the very start.';
+        const PromptAndText = Prompt + text;
+        const options = {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            model: "llama-3.1-sonar-huge-128k-online",
+            messages: [{ content: PromptAndText, role: "user" }]
+          })
+        };
+
+        try {
+          const response = await fetch('https://api.perplexity.ai/chat/completions', options);
+          const data = await response.json();
+          if (data.choices && data.choices.length > 0) {
+            const result = data.choices[0].message.content;
+            const citations = data.citations;
+            document.getElementById('factCheckResult').innerText = result; // Display the result
+            
+            // Create citation links
+            const citationLinksContainer = document.getElementById('citationLinks');
+            citationLinksContainer.innerHTML = ''; // Clear previous links
+            if (citations && citations.length > 0) {
+              citations.forEach(citation => {
+                const link = document.createElement('a');
+                link.href = citation; // Use citation directly as it is only a URL
+                link.target = '_blank'; // Open in new tab
+                link.innerText = citation; // Set the link text to the URL
+                citationLinksContainer.appendChild(link);
+                citationLinksContainer.appendChild(document.createElement('br')); // Line break
+              });
+            }
+
+            // Enable the confirm and cancel buttons after receiving the response
+            document.getElementById('confirmComment').disabled = false;
+            document.getElementById('cancelConfirmation').disabled = false;
+          } else {
+            throw new Error('No result from API');
+          }
+        } catch (err) {
+          console.error(err);
+          document.getElementById('factCheckResult').innerText = 'Failed to fetch fact check result';
+        }
+      };
+
+      await handleSearch(commentText); // Call the fact-checking function
+
+      // Handle confirmation actions
+      document.getElementById('confirmComment').onclick = async function() {
+        // Create a new comment element
+        const newComment = document.createElement('div');
+        newComment.classList.add('comment', 'user_comment');
+        newComment.innerHTML = `<h5>Connor Hong</h5><p>${commentText}</p>`;
+
+        // Append the new comment to the comments container
+        commentsContainer.appendChild(newComment);
+
+        // Expand the comments container dynamically
+        commentsContainer.style.maxHeight = `${commentsContainer.scrollHeight}px`;
+
+        // Clear the textarea
+        document.querySelector('textarea').value = '';
+
+        // Hide the confirmation popup
+        confirmationPopup.style.display = 'none';
+        confirmationPopupOverlay.style.display = 'none';
+
+        // Reset the fact check result
+        document.getElementById('factCheckResult').innerText = '';
+
+        // Re-enable the submit button
+        submitButton.disabled = false;
+
+        // Gray out the confirm and cancel buttons again
+        document.getElementById('confirmComment').disabled = true;
+        document.getElementById('cancelConfirmation').disabled = true;
+      };
+
+      document.getElementById('cancelConfirmation').onclick = function() {
+        // Hide the confirmation popup
+        confirmationPopup.style.display = 'none';
+        confirmationPopupOverlay.style.display = 'none';
+
+        // Reset the fact check result
+        document.getElementById('factCheckResult').innerText = '';
+        
+        // Clear the textarea
+        document.querySelector('textarea').value = '';
+
+        // Re-enable the submit button
+        submitButton.disabled = false;
+
+        // Gray out the confirm and cancel buttons again
+        document.getElementById('confirmComment').disabled = true;
+        document.getElementById('cancelConfirmation').disabled = true;
+      };
+    });
+  </script>
+  <!-- end owl carousel script -->
+
+</body>
+
+</html>
